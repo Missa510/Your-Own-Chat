@@ -6,4 +6,18 @@
   --foreground-rgb: 230, 230, 230;
   --background-start-rgb: 32, 32, 32;
   --background-end-rgb: 20, 20, 20;
+
+  --color-1: #5a6872;
+  --color-2: #354950;
+  --color-3: #1a2225;
+}
+
+#key_header{
+  animation: fadein 0.7s ease-in !important;
+  animation-delay: 250ms;
+}
+
+@keyframes fadein{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }

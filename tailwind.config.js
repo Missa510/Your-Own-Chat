@@ -10,7 +10,8 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "backgraun": "url('../../public/frutiger_menos_peso.webp') !important"
+        "default": "var(--color-1)",
+        "backgraun": "linear-gradient(to right, var(--color-1), var(--color-2), var(--color-3))"
       },
     },
   },
