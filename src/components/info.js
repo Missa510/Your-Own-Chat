@@ -1,4 +1,6 @@
 import ModelosCard from "@/components/modelos"
+import Footer from "@/components/footer";
+
 
 export default function InfoPagina() {
     return (
@@ -41,6 +43,7 @@ export default function InfoPagina() {
                 <ModelosCard />
             </section>
 
+            <Footer/>
         </article>
     )
 }

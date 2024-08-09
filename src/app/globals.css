@@ -12,6 +12,8 @@
   --color-3: #1a2225;
 }
 
+*:focus{ outline: none; }
+
 #key_header{
   animation: fadein 0.7s ease-in !important;
   animation-delay: 250ms;

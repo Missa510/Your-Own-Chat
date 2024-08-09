@@ -9,7 +9,7 @@ export default function ModelosCard() {
             {
                 ModelosYEspecificaciones.map((modelo) => {
                     return (
-                        <Link key={modelo.model_id} href={`#`}
+                        <Link key={modelo.model_id} href={`/${modelo.model_id}`}
                             className="
                             bg-stone-600 
                             border-sky-500
@@ -21,7 +21,12 @@ export default function ModelosCard() {
                             border-2
                             flex
                             items-center
-
+                            transition
+                            ease-in-out
+                            hover:bg-stone-700
+                            focus:bg-stone-700
+                            hover:scale-105
+                            focus:scale-105
                         ">
                             <div className="flex justify-center w-1/4">
                                 <Image
