@@ -8,10 +8,10 @@ const inter = Nunito({
 
 
 export const metadata = {
-    title: "Chat con IA",
-    description: "Chat en tiempo real con un modelo de IA de manera local",
-  };
-  
+  title: "Chat con IA",
+  description: "Chat en tiempo real con un modelo de IA de manera local",
+};
+
 
 export default function RootLayout({ children }) {
   return (

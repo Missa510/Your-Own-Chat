@@ -12,6 +12,7 @@ export default function Header() {
                         width={200}
                         height={200}
                         quality={85}
+                        priority={true}
                         className="aspect-square w-[95px] h-[95px] lg:w-[200px] lg:h-[200px]"
                     />
                     <span className="animate-pulse text-xs p-[5px] lg:text-xl absolute bg-red-500 top-0 right-0 lg:p-2 rounded-full"> +99 </span>

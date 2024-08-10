@@ -1,10 +1,21 @@
 import ModelosCard from "@/components/modelos"
 import Footer from "@/components/footer";
 
+const Agradecimientos = [
+    {
+        key: 1,
+        name: "Midudev",
+        mensaje: "Sin tus enseñanzas y consejos, esta página no hubiese visto la luz"
+    }, {
+        key: 2,
+        name: "Vladimir",
+        mensaje: "Tus consejos me ayudaron a crecer como desarrollador"
+    },
+]
 
 export default function InfoPagina() {
     return (
-        <article className="mt-4 xl:mt-auto container mx-auto px-6 grid gap-y-10 [&>section]:bg-slate-700 [&>section]:px-4 [&>section]:xl:px-28 [&>section]:py-8 [&>section]:rounded-xl [&>section]:grid [&>section]:gap-y-4 [&>section]:mx-3"> 
+        <article className="mt-4 xl:mt-auto container mx-auto px-6 grid gap-y-10 [&>section]:bg-slate-700 [&>section]:px-4 [&>section]:xl:px-28 [&>section]:py-8 [&>section]:rounded-xl [&>section]:grid [&>section]:gap-y-4 [&>section]:mx-3">
 
             <section className="[&>p]: text-slate-300 [&>p]:text-lg [&>p]:xl:text-xl">
                 <h2 className="text-3xl text-white xl:text-5xl font-bold mb-2">Bienvenido a Your Own Chat</h2>
@@ -23,10 +34,10 @@ export default function InfoPagina() {
                         <code className="text-sky-400 uppercase">Privacidad Garantizada:</code> Toda la inteligencia de Your Own Chat está integrada en tu dispositivo. Nunca se envían datos a servidores externos, lo que garantiza que tus conversaciones sean completamente privadas y seguras.
                     </li>
                     <li>
-                    <code className="text-sky-400 uppercase">Diferentes modelos:</code> Puedes cambiar el modelo de IA en esta página para tener la experiencia más óptima a la hora de chatear.
+                        <code className="text-sky-400 uppercase">Diferentes modelos:</code> Puedes cambiar el modelo de IA en esta página para tener la experiencia más óptima a la hora de chatear.
                     </li>
                     <li>
-                    <code className="text-sky-400 uppercase">Fácil de usar:</code> Una interfaz intuitiva y amigable que te permite interactuar con la IA de manera natural y sin complicaciones.
+                        <code className="text-sky-400 uppercase">Fácil de usar:</code> Una interfaz intuitiva y amigable que te permite interactuar con la IA de manera natural y sin complicaciones.
                     </li>
                     <li>
                         <code className="text-sky-400 uppercase">¡¡¡GRATIS!!!</code> Chatear con las IA's es completamente grautito para todos lo modelos de IA que viene integrados (proximamente más modelos)
@@ -34,16 +45,28 @@ export default function InfoPagina() {
                 </ol>
             </section>
 
-            <section>
-                <h2 className="text-3xl text-white xl:text-5xl font-bold mb-2"> ¿Te gustó? Empieza ahora </h2>
-                <p className="text-slate-300 text-lg xl:text-xl">
-                    Elije uno de los modelos integrados para comenzar
-                </p>
+            <ModelosCard />
 
-                <ModelosCard />
+            <section className="[&>ol>li>span]:text-sky-300 [&>ol>li>span]:text-lg [&>ol>li>span]:xl:text-xl">
+                <h2 className="text-3xl text-white xl:text-5xl font-bold mb-2"> Agradecimientos </h2>
+                <ol className="grid gap-y-2">
+                    {
+                        Agradecimientos.map((agradecimiento) => {
+                            return (
+                                <li key={agradecimiento.key}>
+                                    <span>{agradecimiento.name} ❤️</span>
+                                    <p>
+                                        {agradecimiento.mensaje}
+                                    </p>
+                                </li>
+                            )
+
+                        })
+                    }
+                </ol>
             </section>
 
-            <Footer/>
+            <Footer />
         </article>
     )
 }
