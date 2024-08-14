@@ -7,11 +7,11 @@ import { useState, useEffect } from 'react'
 
 function VerificarFirefox() {
 
-    const [usaFirefox, setUsaFirfox] = useState(false)
+    const [usaFirefox, setUsaFirefox] = useState(false)
 
     useEffect(() => {
         if (typeof navigator !== "undefined") {
-            navigator.userAgent.includes('Firefox') && setUsaFirfox(true)
+            navigator.userAgent.includes('Firefox') && setUsaFirefox(true)
         }
     }, [])
 
