@@ -1,5 +1,8 @@
-import ModelosCard from "@/components/modelos"
+// import ModelosCard from "@/components/modelos"
 import Footer from "@/components/footer";
+import dynamic from "next/dynamic";
+
+const ModelosCard = dynamic(() => import('@/components/modelos'), { ssr: false })
 
 const Agradecimientos = [
     {
@@ -9,7 +12,7 @@ const Agradecimientos = [
     }, {
         key: 2,
         name: "Vladimir",
-        mensaje: "Tus consejos me ayudaron a crecer como desarrollador"
+        mensaje: "Tus consejos me ayudaron a crecer youtcomo desarrollador"
     },
 ]
 

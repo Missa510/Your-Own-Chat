@@ -1,15 +1,38 @@
+"use client"
+
 import Image from "next/image"
 import { ModelosYEspecificaciones } from "../data/modelos"
-// import { userAgent } from "next/server"
 import Link from "next/link"
+import { useState, useEffect } from 'react'
+
+function VerificarFirefox() {
+
+    const [usaFirefox, setUsaFirfox] = useState(false)
+
+    useEffect(() => {
+        if (typeof navigator !== "undefined") {
+            navigator.userAgent.includes('Firefox') && setUsaFirfox(true)
+        }
+    }, [])
+
+    return (
+        usaFirefox ? 
+        <h3 className="text-xl xl:text-2xl text-orange-700 bg-orange-300 py-2 px-6 rounded-md">
+            Veo que usas Firefox para chatear con los modelos, no hay problema. La sugerencia de compatibilidad no te aparecerá. <span className="font-bold">ATTE: Missa510</span>
+        </h3> : null
+    )
+}
 
 function VerficarRAM(RAM) {
 
-    if ('deviceMemory' in navigator) {
-        const RAM_DISPOSITIVO = navigator.deviceMemory
-        if (RAM_DISPOSITIVO <= RAM) return (<span className="text-stone-300 italic">~ No recomendado para tú dispositivo</span>)
-        else return (<span className="text-green-300">~ Recomendado para tu dispositivo</span>)
+    if (typeof navigator !== "undefined") {
+        if ('deviceMemory' in navigator) {
+            const RAM_DISPOSITIVO = navigator.deviceMemory
+            if (RAM_DISPOSITIVO <= RAM) return (<span className="text-stone-300 italic">~ No recomendado para tú dispositivo</span>)
+            else return (<span className="text-green-300">~ Recomendado para tu dispositivo</span>)
+        }
     }
+
 }
 
 export default function ModelosCard() {
@@ -21,19 +44,13 @@ export default function ModelosCard() {
                 Elije uno de los modelos integrados para comenzar
             </p>
 
-            {
-                navigator.userAgent.includes('Firefox') && (
-                    <h3 className="text-xl xl:text-2xl text-orange-700 bg-orange-300 py-2 px-6 rounded-md">
-                        Veo que usas Firefox para chatear con los modelos, no hay problema. La sugerencia de compatibilidad no te aparecerá. <span className="font-bold">ATTE: Missa510</span>
-                    </h3>
-                )
-            }
+            {VerificarFirefox()}
 
             <section className="grid place-items-center xl:place-items-stretch grid-cols-1 gap-y-3 2xl:gap-3 2xl:grid-cols-3">
                 {
                     ModelosYEspecificaciones.map((modelo) => {
                         return (
-                            <Link key={modelo.model_id} href={`/${modelo.model_id}`}
+                            <Link key={modelo.model_id} href={`/chat/${modelo.model_id}`}
                                 className="
                             bg-stone-600 
                             border-sky-500

@@ -1,10 +1,8 @@
 import Link from "next/link"
 
-export async function generateMetadata() {
-    return {
-        title: '404',
-        description: 'Página no encontrada',
-    }
+export const metadata = {
+    title: '404',
+    description: 'Página no encontrada',
 }
 
 export default function CuatroCientosCuatro() {
