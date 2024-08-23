@@ -1,6 +1,7 @@
-import { ModelosYEspecificaciones } from "@/data/modelos"
-import Chats from "@/components/chat/chat"
+import { ModelosYEspecificaciones } from "@_$data/modelos"
+import Chats from "@_$comp/chat/chat"
 import { redirect } from "next/navigation"
+import ComponenteWorker from "@_$comp/workers/componenteWorker"
 
 export async function generateMetadata({ params }) {
 
@@ -21,7 +22,10 @@ export default function Chat({ params }) {
     if (!modelo) redirect('/404')
 
     return (
+        <>
+        <ComponenteWorker/>
         <Chats chatCon={modelo.model_name} />
+        </>
     )
 
 }

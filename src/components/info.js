@@ -1,5 +1,4 @@
-// import ModelosCard from "@/components/modelos"
-import Footer from "@/components/footer";
+import Footer from "@_$comp/footer";
 import dynamic from "next/dynamic";
 
 const ModelosCard = dynamic(() => import('@/components/modelos'), { ssr: false })

@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { ModelosYEspecificaciones } from "../data/modelos"
+import { ModelosYEspecificaciones } from "@_$data/modelos"
 import Link from "next/link"
 import { useState, useEffect } from 'react'
 

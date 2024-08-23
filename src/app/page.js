@@ -1,5 +1,5 @@
-import Header from "@/components/header";
-import InfoPagina from "@/components/info";
+import Header from "@_$comp/header";
+import InfoPagina from "@_$comp/info";
 
 export default function Home() {
   return (

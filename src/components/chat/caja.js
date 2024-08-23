@@ -1,5 +1,5 @@
 // import Script from "next/script"
-import SendIcon from "../svg/send"
+import SendIcon from "@_$comp/svg/send"
 import Script from "next/script"
 // import Mensajes from "./mensajes"
 // import { useState } from "react"

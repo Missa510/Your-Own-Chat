@@ -1,8 +1,10 @@
 "use client"
 
-import Mensajes from "./mensajes"
-import CajaDeTexto from "./caja"
+import Mensajes from "@_$comp/chat/mensajes"
+import CajaDeTexto from "@_$comp/chat/caja"
 import { useState } from "react"
+import Script from "next/script"
+
 
 export default function Chats(props) {
 
@@ -37,6 +39,8 @@ export default function Chats(props) {
             <footer className="flex justify-center sticky bottom-4 pt-4 z-50 w-full">
                 <CajaDeTexto onSubmit={handleSubmit} />
             </footer>
+
+            <Script src="/@_$work/worker_uno.js" strategy="worker" onReady={() => { window.alert('Worker uno funcionando'); navigator.userAgent } } />
         </>
     )
 }

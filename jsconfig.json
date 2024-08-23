@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@_$data/*": ["./src/data/*"],
+      "@_$work/*": ["./src/workers/*"],
+      "@_$comp/*": ["./src/components/*"]
     }
   }
 }
