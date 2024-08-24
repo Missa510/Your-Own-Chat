@@ -1,5 +1,5 @@
 import { Nunito } from "next/font/google";
-import "./globals.css";
+import "../../globals.css";
 
 const inter = Nunito({
   subsets: ["latin"],
@@ -7,7 +7,8 @@ const inter = Nunito({
 });
 
 export const metadata = {
-  
+  title: "Chat con modelos IA",
+  description: "Chatea",
   generator: 'Next.js',
   applicationName: 'Your Own Chat',
   referrer: 'origin-when-cross-origin',
