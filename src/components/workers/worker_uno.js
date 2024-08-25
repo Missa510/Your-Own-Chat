@@ -1,9 +1,9 @@
 self.addEventListener('message', (event) => {
-    const { data } = event;
-    // Realizar la tarea intensiva aquí
-    const result = someIntensiveCalculation(data);
-    self.postMessage(result);
-  });
+  const { data } = event;
+  // Realizar la tarea intensiva aquí
+  const result = someIntensiveCalculation(data);
+  self.postMessage(result);
+});
 
 // Para aligerar la carga de archivos
 // import { WebWorkerMLCEngineHandler } from "@mlc-ai/web-llm";

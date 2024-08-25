@@ -7,7 +7,7 @@ const inter = Nunito({
 });
 
 export const metadata = {
-  
+
   generator: 'Next.js',
   applicationName: 'Your Own Chat',
   referrer: 'origin-when-cross-origin',
@@ -15,6 +15,9 @@ export const metadata = {
   title: "Your Own Chat",
   description: "Chat en tiempo real con un modelo de IA de manera local",
   creator: 'Missa510UwU',
+  icons: {
+    icon: "./favicon.ico",
+  },
 }
 
 export default function RootLayout({ children }) {
@@ -22,9 +25,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
 
       <body className={inter.className}>
-        <main className="min-h-dvh bg-backgraun bg-no-repeat bg-cover bg-center mx-auto my-0 p-4 text-white">
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );

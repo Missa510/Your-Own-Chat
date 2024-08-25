@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-export default function ComponenteWorker(){
+export default function ComponenteWorker() {
   const [result, setResult] = useState(null);
 
   useEffect(() => {

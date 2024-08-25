@@ -40,7 +40,7 @@ export default function Chat({ params }) {
                     <span className="text-5xl font-bold">Chat con {modelo.model_name}</span>
                 </section>
 
-                <section className="flex flex-col items-center gap-y-3 w-full overflow-y-auto">
+                <section id="mensajes_section" className="flex flex-col items-center gap-y-3 w-full overflow-y-auto scroll-smooth mb-3">
 
                     {
                         mensajes.map((mensaje, i) => (
@@ -53,9 +53,10 @@ export default function Chat({ params }) {
 
             </section>
 
-            <footer className="flex justify-center sticky bottom-4 pt-4 z-50 w-full">
+            <footer className="flex justify-center pt-4 z-50 w-full scroll-mb-0">
                 <CajaDeTexto onSubmit={handleSubmit} />
             </footer>
+
             <ComponenteWorker />
         </>
     )

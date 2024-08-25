@@ -7,15 +7,11 @@ const inter = Nunito({
 });
 
 export const metadata = {
-  title: "Chat con modelos IA",
+  title: "Chat con modelos IA (pronto con el nombre)",
   description: "Chatea",
-  generator: 'Next.js',
-  applicationName: 'Your Own Chat',
-  referrer: 'origin-when-cross-origin',
-  keywords: ['Next.js', 'React', 'JavaScript', 'IA', 'Chat', 'Chat IA', 'Chat local IA'],
-  title: "Your Own Chat",
-  description: "Chat en tiempo real con un modelo de IA de manera local",
-  creator: 'Missa510UwU',
+  icons: {
+    icon: "../favicon.ico",
+  },
 }
 
 export default function RootLayout({ children }) {
@@ -23,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
 
       <body className={inter.className}>
-        <main className="min-h-dvh bg-backgraun bg-no-repeat bg-cover bg-center mx-auto my-0 p-4 text-white">
+        <main className="relative min-h-dvh bg-backgraun bg-no-repeat bg-cover bg-center mx-auto my-0 p-4 text-white overflow-y-auto scroll-smooth">
           {children}
         </main>
       </body>
